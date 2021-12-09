@@ -58,7 +58,7 @@ Note: The code expects Ts not Us in the sequence.
 
         for i in range(int(len(seq)/3)):
             codon = seq[3*i:3*i+3]
-            aa = str( codon.translate() )
+            aa = str(codon.translate())
             ignore = True
             opt = False
             if aa in aa_list:

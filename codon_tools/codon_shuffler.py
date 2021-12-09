@@ -1,7 +1,6 @@
 import random
 
 from Bio.Seq import Seq
-from Bio.Alphabet import IUPAC, generic_dna
 
 class CodonShuffler:
     """

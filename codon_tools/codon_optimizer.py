@@ -1,7 +1,6 @@
 import random
 
 from Bio.Seq import Seq
-from Bio.Alphabet import IUPAC
 
 from .lookup_tables import reverse_genetic_code
 
@@ -14,7 +13,7 @@ class CodonOptimizer:
     def random_reverse_translate(self, protein):
         # choose random codon for each amino acid
         dna = ''.join([random.choice(reverse_genetic_code[aa]) for aa in protein.upper() ])
-        return Seq(dna, IUPAC.unambiguous_dna)
+        return Seq(dna)
 
     def change_random_codon(self, seq, start_window, end_window):
         """``seq``: The nucleotide sequence in which a codon should be changed
